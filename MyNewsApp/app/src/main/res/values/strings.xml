@@ -3,6 +3,14 @@
     <string name="retry">Retry</string>
     <string name="author_format">by %s</string>
 
+    <!-- Preference Titles -->
+    <string name="personal_information_header">Personal Information</string>
+    <string name="preferences_header">Preferences</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="category">Category</string>
+    <string name="sort_by">Sort By</string>
+
     <!-- plurals -->
     <string name="time_moments_ago">Moments ago</string>
     <plurals name="time_minutes_ago">
@@ -21,6 +29,8 @@
     <!-- Error message -->
     <string name="error_no_internet">No Internet. Please check your connection.</string>
     <string name="error_unknown_error">Unknown error occurred. Please try again.</string>
+
+    <string name="message_no_preference">Please select your preference on profile tab in order to see News in that category.</string>
 
     <!-- Arrays -->
     <string-array name="page_titles">

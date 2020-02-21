@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.example.mynewsapp.R
+import com.example.mynewsapp.activity.main.pages.PersonalNewsFragment
+import com.example.mynewsapp.activity.main.pages.ProfileFragment
 import com.example.mynewsapp.activity.main.pages.TopNewsFragment
 import com.example.mynewsapp.activity.main.pages.TopNewsViewModel
 
@@ -17,7 +19,8 @@ class MainPagerAdapter(
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> TopNewsFragment.newInstance()
-            else -> TopNewsFragment.newInstance()
+            1 -> PersonalNewsFragment.newInstance()
+            else -> ProfileFragment.newInstance()
         }
     }
 
