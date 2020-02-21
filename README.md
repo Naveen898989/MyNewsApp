@@ -26,3 +26,7 @@ Profile Screen
 Shows user preferences. Users can enter their personal information: username, email address and select preferences: news category they prefer to see. Moving away from the screen saves all the preferences.
 
 **Note**: Application tracks errors using Firebase Crashlytics. Your data *might* be sent to Google.
+
+Demo
+----
+![Demo video](https://raw.githubusercontent.com/Naveen898989/MyNewsApp/master/demo.gif)
