@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.detail.DetailActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/fab_margin_bottom">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                android:gravity="end"
+                android:paddingLeft="@dimen/activity_padding_horizontal"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingRight="@dimen/activity_padding_horizontal"
+                android:paddingBottom="@dimen/padding_small"
+                android:textColor="@color/textColorInverse"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="@id/imageView" />
+
+            <TextView
+                android:id="@+id/textViewAuthor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_padding_horizontal"
+                android:layout_marginTop="@dimen/padding_large"
+                android:layout_marginRight="@dimen/activity_padding_horizontal"
+                app:layout_constraintEnd_toStartOf="@id/textViewTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+            <TextView
+                android:id="@+id/textViewTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/textViewAuthor"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_padding_horizontal"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/activity_padding_horizontal"
+                android:textColor="@color/textColorTitle"
+                android:textSize="@dimen/textSizeLarge"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/textViewAuthor" />
+
+            <TextView
+                android:id="@+id/textViewDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_padding_horizontal"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/activity_padding_horizontal"
+                android:textSize="@dimen/textSizeMedium"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+            <TextView
+                android:id="@+id/textViewContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_padding_horizontal"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/activity_padding_horizontal"
+                android:textSize="@dimen/textSizeMedium"
+                app:layout_constraintTop_toBottomOf="@id/textViewDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        app:layout_anchor="@id/scrollView"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@drawable/ic_link_white_24dp"
+        app:useCompatPadding="true" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
