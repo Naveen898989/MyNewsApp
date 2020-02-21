@@ -16,9 +16,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-
         tabLayout.setupWithViewPager(viewPagerMain)
 
         viewPagerMain.adapter = MainPagerAdapter(

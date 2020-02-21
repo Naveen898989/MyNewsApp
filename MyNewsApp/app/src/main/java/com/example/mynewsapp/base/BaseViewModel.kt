@@ -2,6 +2,7 @@ package com.example.mynewsapp.base
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -15,5 +16,7 @@ abstract class BaseViewModel(application: Application) : AndroidViewModel(applic
         get() = parentJob + Dispatchers.Default
 
     val scope = CoroutineScope(coroutineContext)
+
+    val progressBarVisibilityLiveData = MutableLiveData<Boolean>()
 
 }

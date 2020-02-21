@@ -12,8 +12,7 @@ import java.io.IOException
 
 class TopNewsViewModel(application: Application) : BaseViewModel(application) {
 
-    val progressBarVisibilityLiveData = MutableLiveData<Boolean>()
-    val topNewsLiveData = MutableLiveData<List<News>>()
+    val topNewsLiveData = MutableLiveData<ArrayList<News>>()
     val errorLiveData = MutableLiveData<ErrorObject>()
 
     init {
